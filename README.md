@@ -5,7 +5,7 @@
 * Pruning
 * Clustering
 
-## Training example
+## Training example (dusty nv)
 `jetson-inference/python/training/classification/train.py`
 
 ## Transfer learning
