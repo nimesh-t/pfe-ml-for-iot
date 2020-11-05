@@ -9,7 +9,7 @@
 `jetson-inference/python/training/classification/train.py`
 
 ## Transfer learning
-### Manually populate database using camera-capture from jetson-inference
+### Manually populate dataset using camera-capture from jetson-inference
 ```bash
 mkdir datasets
 cd ~/datasets
