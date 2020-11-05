@@ -32,4 +32,5 @@ camera-capture --camera=0 --width=640 --height=480
 [TensorRT with PyTorch](https://www.learnopencv.com/how-to-convert-a-model-from-pytorch-to-tensorrt-and-speed-up-inference/)\
 [Package download links](https://elinux.org/Jetson_Zoo)\
 [int8 Quantisation](https://www.mathworks.com/company/newsletters/articles/what-is-int8-quantization-and-why-is-it-popular-for-deep-neural-networks.html)\
-[Federated Learning](https://medium.com/@ODSC/what-is-federated-learning-99c7fc9bc4f5)
+[Federated Learning](https://medium.com/@ODSC/what-is-federated-learning-99c7fc9bc4f5)\
+[ONNX](https://blog.paperspace.com/what-every-ml-ai-developer-should-know-about-onnx/)
