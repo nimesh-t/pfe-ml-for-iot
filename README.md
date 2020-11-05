@@ -1,1 +1,1 @@
-# pfe-ml-for-iot
+# PFE 2020 - ML for IoT
