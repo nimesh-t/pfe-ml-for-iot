@@ -26,6 +26,15 @@ camera-capture --camera=0 --width=640 --height=480
 `tegrastats` - shows CPU, memory, GPU usage\
 `jtop` - GUI stats (`pip install jetson-stats`)
 
+## Quelques resultats
+
+|   Model   | Size (MB) | t/epoch full (min) | t/epoch (min) last layer only | Convergence? val_acc |
+|:---------:|:---------:|:------------------:|:-----------------------------:|:--------------------:|
+| MobileNet |     16    |          6         |              1.5              |         0.94         |
+|   VGG16   |    528    |        2h40        |                               |         0.60         |
+|  ResNet50 |     98    |         18         |               5               |         0.55         |
+|  Xception |     88    |         20         |                               |                      |
+
 ## Useful links
 [Getting Started with AI on Jetson Nano](https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/about) \
 [Camera usage documentation](https://developer.download.nvidia.com/embedded/L4T/r24_Release_v2.0/Docs/L4T_Tegra_X1_Multimedia_User_Guide_Release_24.2.pdf?ORzXaY-aQWa-QsQCPbqN8XcwbHMxXI_oyRtg_2hkGETt-YUUTyD_YFx5YJpeOhkRp5oHxhHc88Q4GmstgGw3na8H_xqlm1CCvTIr6zLKpQyxQXL0yN26KTMH8xOMx6pdeCjUSo5Vja2okulw2mSJPtduOxs-tWHqxUxtM32Lf1do5HPmKzqHhTsRdmmnUSkm9ynPSv4)\
