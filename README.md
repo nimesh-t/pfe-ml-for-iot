@@ -7,14 +7,14 @@ TensorFlow : https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-p
 ! pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
 
 La BDD doit être dans le même répertoire que les fichiers d'entraînement.
-Dataset/
-| Train/
-|   classe1/
-|   classeN/
-| Test/
-|   classe1/
-|   classeN/
-Results/
+Dataset/\
+| Train/\
+|   classe1/\
+|   classeN/\
+| Test/\
+|   classe1/\
+|   classeN/\
+Results/\
 
 
 Erreur possible : "Cannot allocate memory in static TLS block"
