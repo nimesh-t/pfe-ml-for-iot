@@ -6,7 +6,9 @@ Ce projet est une application de détection de feu en utilisant des réseaux de 
 
 Version de JetPack : 4.4
 TensorFlow : https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
-! pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
+```bash
+pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
+```
 
 La BDD doit être dans le même répertoire que les fichiers d'entraînement.
 Dataset/\
@@ -21,5 +23,6 @@ Results/
 
 Erreur possible : "Cannot allocate memory in static TLS block"
 Solution :
-! export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
-
+```bash
+export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
+```
