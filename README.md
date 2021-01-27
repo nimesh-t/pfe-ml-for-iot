@@ -1,4 +1,6 @@
-# PFE 2020 - ML for IoT
+# PFE de la VAP SEM (Télécom SudParis 2020)  - ML for IoT
+
+
 
 Ce projet est une application de détection de feu en utilisant des réseaux de neurones sur une Nvidia Jetson Nano. L'optimisation du réseau se fait grâce à TensorRT.
 
