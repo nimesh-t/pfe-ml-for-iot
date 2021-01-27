@@ -1,45 +1,23 @@
 # PFE 2020 - ML for IoT
 
-## [TensorRT](https://docs.nvidia.com/deeplearning/frameworks/tf-trt-user-guide/index.html#usingtftrt)
-* Quantisation
-* Pruning
-* Clustering
+Ce projet est une application de détection de feu en utilisant des réseaux de neurones sur une Nvidia Jetson Nano. L'optimisation du réseau se fait grâce à TensorRT.
 
-## Training example (dusty nv)
-`jetson-inference/python/training/classification/train.py`
+Version de JetPack : 4.4
+TensorFlow : https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
+! pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
 
-## Transfer learning
-### Manually populate dataset using camera-capture from jetson-inference
-```bash
-mkdir datasets
-cd ~/datasets
-mkdir <dataset_name>
-cd <dataset_name>
-touch labels.txt
-echo “label1” >> labels.txt
-echo “label2” >> labels.txt
+La BDD doit être dans le même répertoire que les fichiers d'entraînement.
+Dataset/
+| Train/
+|   classe1/
+|   classeN/
+| Test/
+|   classe1/
+|   classeN/
+Results/
 
-camera-capture --camera=0 --width=640 --height=480
-```
 
-## Monitoring Jetson Nano
-`tegrastats` - shows CPU, memory, GPU usage\
-`jtop` - GUI stats (`pip install jetson-stats`)
+Erreur possible : "Cannot allocate memory in static TLS block"
+Solution :
+! export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
-## Quelques resultats
-
-|   Model   | Size (MB) | t/epoch full (min) | t/epoch (min) last layer only | Convergence? val_acc |
-|:---------:|:---------:|:------------------:|:-----------------------------:|:--------------------:|
-| MobileNet |     16    |          6         |              1.5              |         0.94         |
-|   VGG16   |    528    |        2h40        |                               |         0.60         |
-|  ResNet50 |     98    |         18         |               5               |         0.55         |
-|  Xception |     88    |         20         |                               |                      |
-
-## Useful links
-[Getting Started with AI on Jetson Nano](https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/about) \
-[Camera usage documentation](https://developer.download.nvidia.com/embedded/L4T/r24_Release_v2.0/Docs/L4T_Tegra_X1_Multimedia_User_Guide_Release_24.2.pdf?ORzXaY-aQWa-QsQCPbqN8XcwbHMxXI_oyRtg_2hkGETt-YUUTyD_YFx5YJpeOhkRp5oHxhHc88Q4GmstgGw3na8H_xqlm1CCvTIr6zLKpQyxQXL0yN26KTMH8xOMx6pdeCjUSo5Vja2okulw2mSJPtduOxs-tWHqxUxtM32Lf1do5HPmKzqHhTsRdmmnUSkm9ynPSv4)\
-[TensorRT with PyTorch](https://www.learnopencv.com/how-to-convert-a-model-from-pytorch-to-tensorrt-and-speed-up-inference/)\
-[Package download links](https://elinux.org/Jetson_Zoo)\
-[int8 Quantisation](https://www.mathworks.com/company/newsletters/articles/what-is-int8-quantization-and-why-is-it-popular-for-deep-neural-networks.html)\
-[Federated Learning](https://medium.com/@ODSC/what-is-federated-learning-99c7fc9bc4f5)\
-[ONNX](https://blog.paperspace.com/what-every-ml-ai-developer-should-know-about-onnx/)
