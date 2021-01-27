@@ -14,7 +14,7 @@ Dataset/\
 | Test/\
 |   classe1/\
 |   classeN/\
-Results/\
+Results/
 
 
 Erreur possible : "Cannot allocate memory in static TLS block"
