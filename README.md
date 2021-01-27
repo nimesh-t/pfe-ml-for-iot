@@ -4,13 +4,14 @@
 
 Ce projet est une application de détection de feu en utilisant des réseaux de neurones sur une Nvidia Jetson Nano. L'optimisation du réseau se fait grâce à TensorRT.
 
-Version de JetPack : 4.4
+Python 3.6.9\
+Version de JetPack : 4.4\
 TensorFlow : https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
 ```bash
 pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
 ```
 
-La BDD doit être dans le même répertoire que les fichiers d'entraînement.
+La BDD doit être dans le même répertoire que les fichiers d'entraînement.\
 Dataset/\
 | Train/\
 |   classe1/\
@@ -21,7 +22,7 @@ Dataset/\
 Results/
 
 
-Erreur possible : "Cannot allocate memory in static TLS block"
+Erreur possible : "Cannot allocate memory in static TLS block"\
 Solution :
 ```bash
 export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
