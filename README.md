@@ -6,7 +6,7 @@ Ce projet est une application de détection de feu en utilisant des réseaux de 
 
 Python 3.6.9\
 Version de JetPack : 4.4\
-[Get Started Jetson Nano](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)
+[Get Started Jetson Nano](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit) \
 TensorFlow : https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
 ```bash
 pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
