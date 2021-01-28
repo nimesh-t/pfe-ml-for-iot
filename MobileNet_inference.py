@@ -41,21 +41,18 @@ preds = model.predict(img_array,steps=1)[0]
 print("inference time : "+ str(time.time()-start_time))
 
 print(preds)
-"""
+
 idxs = np.argsort(preds)[::-1][:2]
 
-# loop over the indexes of the high confidence class labels
 for (i, j) in enumerate(idxs):
-    # build the label and draw the label on the image
     label = "{}: {:.2f}%".format(Class[j], preds[j] * 100)
     cv2.putText(img_orig, label, (10, (i * 30) + 25), 
         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
-# show the probabilities for each of the individual labels
 for (label, p) in zip(Class, preds):
     print("{}: {:.2f}%".format(label, p * 100))
 
-# show the output image
+
 plt.imshow(img_orig)
 plt.show()
-cv2.imwrite('test.jpg',img_orig)"""
+cv2.imwrite('test.jpg',img_orig)
