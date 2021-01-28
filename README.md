@@ -26,7 +26,7 @@ Inference/
 Les scripts MobileNet.py, ResNet50.py ou Xception.py génère le modèle et les courbes d'entraînement.\
 Le script MobileNet_inference.py renvoie les résultats sur une image dans  Inference/test_images/.
 Le script MobileNet_inference_trt.py génère un modèle optimisé (FP16) avec TensorRT et renvoie les résultats d'une prédiction avec ce modèle. La deuxième partie ne fonctionne pas encore.
-Le script MobileNet_infer_cam.py effectue des prédictions sur des trames issues de la caméra Raspberry Pi Camera V2.
+Le script MobileNet_infer_cam.py effectue des prédictions sur des trames issues de la caméra Raspberry Pi Camera V2. Le code utilisé pour la partie caméra vient de : https://github.com/JetsonHacksNano/CSI-Camera .
 
 Erreur possible : "Cannot allocate memory in static TLS block"\
 Solution :
